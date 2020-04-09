@@ -1,0 +1,359 @@
+/*global styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+li,
+button,
+input,
+label,
+p {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover {
+  color: #ff9900;
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+button {
+  padding: 2rem 6rem;
+  background-color: #4c6e97;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: "Bebas Neue", cursive;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #ff9900;
+}
+
+/*the navigation, hero section styles*/
+.header {
+  background-color: #131c27;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.nav {
+  min-height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem;
+}
+
+.nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.logo {
+  flex: 2 1 40rem;
+  font-family: "Do Hyeon", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url(../img/waterfall.jpg);
+  min-height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h3 {
+  padding: 5rem;
+}
+
+/*benefits section styles*/
+#locations {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url(../img/new-york-page.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.locations-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+}
+
+.locations-head h3 {
+  padding: 4rem 0rem;
+  background: linear-gradient(#131c27, #663b34);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+.moving-cloud1 {
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+
+.moving-cloud2 {
+  top: 15%;
+  z-index: -1;
+  opacity: 0.75;
+  animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+/*benefits section*/
+.benefits-head{
+    background: #343c44;
+    padding: 3rem;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.benefits-head h3{
+    padding: 1rem;
+}
+
+.cards{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    flex: 1 1 35rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25),
+    0px 20px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+
+}
+
+.card h4{
+    padding: 3rem;
+}
+
+.card p{
+    padding: 1rem;
+}
+
+.cards img{
+    max-width: 15%;
+    margin: 3rem;
+}
+
+.card-img{
+    background-color: #343c44;
+}
+
+/*contact section styles*/
+#contact{
+    min-height: 100vh;
+    background:  linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url(../img/contact-mountain.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper{
+    background: rgba(19, 28, 39, 0.8);
+    width: 60%;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.form-head{
+    text-align: center;
+    padding: 4rem;
+}
+
+.name-form, .email-form{
+    padding: 3rem;
+    text-align: center;
+}
+
+.form-wrapper label{
+    margin: 0rem 3rem;
+}
+
+.form-wrapper input{
+    padding: 1rem 3rem;
+}
+
+.form-wrapper button{
+    width: 100%;
+    padding: 2rem;
+    margin-top: 8rem;
+}
+
+/*footer styles*/
+footer{
+    color: #fff;
+    background: rgba(19, 28, 39, 1);
+}
+
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    min-height: 10vh;
+}
+
+footer h5{
+    flex: 1 1 40rem;  
+    opacity: 0.7;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-icon img{
+    height: 3rem;
+    margin-right: 1rem;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.footer-icon img:hover{
+    opacity: 1;
+}
+
+/*focus*/
+button:focus{
+  background: #ff9900;
+  outline-style: solid;
+}
+
+/*animation*/
+@keyframes cloudAnimation {
+  0% {
+    transform: translate(10%, -10%);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+/*mobile version*/
+@media screen and (max-width: 932px) {
+  html {
+    font-size: 45%;
+  }
+
+  .nav {
+    text-align: center;
+  }
+
+  #logo {
+    padding: 2rem;
+  }
+
+  .cloud{
+    height: 40rem;
+    pointer-events: none;
+  }
+
+  .moving-cloud1 {
+      z-index: -1;
+  }
+  
+  .moving-cloud2 {
+      z-index: -2;
+  top: 5%;
+
+  }
+
+  .locations-head h3{
+    background: rgba(19, 28, 39, 0.8);
+    -webkit-text-fill-color: #fff;
+    text-align: center;
+  }
+
+  .form-wrapper{
+      width: 95%;
+  }
+}
